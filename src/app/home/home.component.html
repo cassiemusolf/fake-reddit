@@ -1,0 +1,6 @@
+<h1>Fake Reddit</h1>
+<div *ngFor="let reddit of reddits | async" (click)="goToDetailPage(currentReddit)" class="panel panel-default">
+  <div class="panel-body">
+  <h3>{{reddits.name}}</h3>
+  </div>
+</div>

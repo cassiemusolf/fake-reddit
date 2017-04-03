@@ -1,0 +1,6 @@
+{ "reddits": [{
+    "name": "Starbucks Goes Bankrupt", "user": "billiejoe", "content": "Just kidding, Starbucks is too popular for all that", "id": "1"
+  }, {
+    "name": "Bootcamps Are More Popular Than CS Degrees Now", "user": "codegenius", "content": "With the rise of bootcamps, CS degrees are no longer needed to enter the programming field", "id": "2"
+    }]
+}
