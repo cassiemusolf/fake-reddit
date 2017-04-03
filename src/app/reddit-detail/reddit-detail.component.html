@@ -1,6 +1,6 @@
 <div>
-  <h2>{{redditToDisplay.name}}</h2>
-  <h3>{{redditToDisplay.user}}</h3>
-  <h4>{{redditToDisplay.content}}</h4>
+  <h2>{{(redditToDisplay | async)?.name}}</h2>
+  <h3>{{(redditToDisplay | async)?.user}}</h3>
+  <h4>{{(redditToDisplay | async)?.content}}</h4>
   <button (click)="voteUp(redditToDisplay)" class="btn btn-info">+</button><button (click)="voteDown(redditToDisplay)" class="btn btn-danger">-</button><p>{{redditToDisplay.upvote}}</p>
 </div>

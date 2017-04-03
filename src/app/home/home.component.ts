@@ -2,7 +2,7 @@ import { Component, Input, EventEmitter, OnInit } from '@angular/core';
 import { Reddit } from '../reddit.model';
 import { Router } from '@angular/router';
 import { RedditService } from '../reddit.service';
-import { FirebaseListObservable } from 'angularfire2'; 
+import { FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +12,15 @@ import { FirebaseListObservable } from 'angularfire2';
 })
 
 export class HomeComponent implements OnInit {
-  masterRedditList: FirebaseListObservable<any[]>;
+  reddits: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private redditService: RedditService){}
 
   ngOnInit(){
-    this.masterRedditList = this.redditService.getReddits();
+    this.reddits = this.redditService.getReddits();
   }
 
-  goToDetailPage(clickedReddit: Reddit) {
-    this.router.navigate(['reddits', clickedReddit.id]);
+  goToDetailPage(clickedReddit) {
+    this.router.navigate(['reddits', clickedReddit.$key]);
   };
 }

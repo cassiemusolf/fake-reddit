@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { PopularComponent } from './popular/popular.component';
 import { AddRedditComponent } from './add-reddit/add-reddit.component';
 import { RedditDetailComponent } from './reddit-detail/reddit-detail.component';
+import { AdminComponent } from './admin/admin.component';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -20,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'reddits/:id',
     component: RedditDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
  ];
 

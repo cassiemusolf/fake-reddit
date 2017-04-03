@@ -6,12 +6,15 @@
     <ul class="nav navbar-nav navbar-left">
       <li><a routerLink="popular">Popular</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="add-reddit">Add a Post</a></li>
-    </ul>
   </div>
 </nav>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <a class="text-muted" routerLink="admin">Admin</a>
+  </div>
+</footer>

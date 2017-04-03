@@ -10,6 +10,7 @@ import { AddRedditComponent } from './add-reddit/add-reddit.component';
 import { RedditDetailComponent } from './reddit-detail/reddit-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     PopularComponent,
     HomeComponent,
     AddRedditComponent,
-    RedditDetailComponent
+    RedditDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

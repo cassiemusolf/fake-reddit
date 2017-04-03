@@ -1,4 +1,3 @@
 export class Reddit {
-  public upvote: number = 0;
-  constructor(public name: string, public user: string, public content: string, public id: number){}
+  constructor(public name: string, public user: string, public content: string, public upvote: number){}
 }

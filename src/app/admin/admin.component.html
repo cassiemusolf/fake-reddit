@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">New Post</h1>
+  </div>
+  <div class="panel-body">
+    <label for="name">Title</label>
+    <input #newName class="form-control">
+    <label for="user">User Name</label>
+    <input #newUser class="form-control">
+    <label for="content">Post</label>
+    <textarea #newContent class="form-control"></textarea>
+    <button (click)="submitForm(newName.value, newUser.value, newContent.value)" class="btn btn-danger">Add</button>
+  </div>
+</div>

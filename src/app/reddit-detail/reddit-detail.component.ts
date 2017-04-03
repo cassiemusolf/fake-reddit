@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Reddit } from '../reddit.model';
 import { RedditService } from '../reddit.service';
+import { FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-reddit-detail',
@@ -12,8 +13,8 @@ import { RedditService } from '../reddit.service';
 })
 
 export class RedditDetailComponent implements OnInit {
-  redditId: number;
-  redditToDisplay: Reddit;
+  redditId: string;
+  redditToDisplay;
 
   constructor(private route: ActivatedRoute,
     private location: Location,
@@ -29,7 +30,7 @@ export class RedditDetailComponent implements OnInit {
   }
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.redditId = parseInt(urlParameters['id']);
+      this.redditId = urlParameters['id'];
     });
     this.redditToDisplay = this.redditService.getRedditById(this.redditId);
   }

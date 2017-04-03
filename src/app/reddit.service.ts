@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Reddit } from './reddit.model';
-import { REDDITS } from './mock-reddits';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 @Injectable()
 export class RedditService {
   reddits: FirebaseListObservable<any[]>;
@@ -14,12 +14,11 @@ export class RedditService {
     return this.reddits;
   }
 
-  getRedditById(redditId: number){
-    for (var i = 0; i <= REDDITS.length - 1; i++) {
-      if (REDDITS[i].id === redditId) {
-        return REDDITS[i];
-      }
-    }
+  addReddit(newReddit: Reddit) {
+    this.reddits.push(newReddit);
   }
 
+  getRedditById(redditId: string){
+    return this.angularFire.database.object('reddits/' + redditId);
+  }
 }
